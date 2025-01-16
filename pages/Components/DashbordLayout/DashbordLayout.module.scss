@@ -1,0 +1,146 @@
+@use '../../../styles/mixins' as mx;
+@use '../../../styles/variables' as vars;
+
+
+
+@mixin button-bar {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 11px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.henderContainer {
+  display: flex;
+  background-color: #c4c4c4;
+  max-height: 84px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.active {
+  background-color: vars.$active-color;
+  border: 1px solid vars.$active-border;
+  color: vars.$pure-white;
+  @include button-bar;
+  @include mx.hover(vars.$active-hover, 0.3s);
+}
+
+.buttonContainer {
+  background-color: vars.$pure-white;
+  border: 1px solid vars.$inputBox-border-color;
+  @include button-bar;
+  @include mx.hoverwithBoxShadow();
+}
+
+.textStyle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24.55px;
+  text-align: left;
+}
+
+.buttonBar {
+  margin: auto;
+  height: 52px;
+  background-color: #D3D3D3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  @include mx.responsive('tablet'){
+    gap: 6px;
+
+  }
+}
+
+@mixin large-font-bold {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 43.65px;
+}
+
+.largeText {
+  @include large-font-bold;
+  margin-left: 2rem;
+  display: flex ;
+      gap: 4px;
+      align-items: stretch;
+  
+}
+
+.menucontainer {
+  background-color: rgb(235, 238, 243);
+  border-radius: 40px;
+  //
+  @include mx.responsive('tablet'){
+    display: none;
+  }
+}
+
+.menuitem {
+  padding-left: 24px;
+  padding-right: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 99, 151);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.429;
+  letter-spacing: 0.1px;
+  outline: 0px;
+  margin: 0px;
+  border-radius: 100px;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.menuitem:hover {
+  color: rgb(31 81 240);
+  background-color: rgb(224, 231, 248);
+}
+
+.getcode {
+  margin-right: 2rem;
+}
+
+.sidebar {
+  width: 304px;
+  padding: 2rem;
+  border-color: #D3D3D3;
+  height: calc(100vh - 12rem + 4px);
+  border: 4px solid #D3D3D3;
+  border-radius: 32px;
+  margin: 2rem 0rem 2rem 2rem;
+  background-color: #d5e6e1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.bodycontainer {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 8rem + 4px);
+  width: calc(100vw - 11rem + 4px);
+  overflow: auto;
+  padding: 2rem;
+  flex-direction: column;
+}

@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  font-family: 'Nunito';
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/Nunito-Regular.ttf') format('truetype');
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #e0e0e0 25%, #cfcfcf 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 10s infinite;
+}
