@@ -29,12 +29,12 @@ const DashbordLayout: React.FC<DashbordLayoutProp> = ({
         <div className={styles.dashbordConatainer}>
             <div className={styles.buttonBar}>
                 <div className={styles.largeText}>      <Image src="/apple.svg" alt="github" width={38} height={38} />Hisman Salick</div>
-                <div className={styles.menucontainer}>{TopBar.map((item, index) => <div key={`${index}-1`}className={styles.menuitem}>{item}</div>)}  </div>
+                <div className={styles.menucontainer}>{TopBar?.map((item, index) => <div key={`${index}-1`}className={styles.menuitem}>{item}</div>)}  </div>
                 <Image src="/github.svg"  className={styles.getcode} alt="github" width={46} height={46} />
             </div>
             <div className={styles.bodycontainer}>
                 <div className={styles.sidebar}>
-                    {SideBar.map((item, index) => {
+                    {SideBar?.map((item, index) => {
                         return (
                             <button key={`${index}-2`} className={id === item.path ? styles.active : styles.buttonContainer} role="button" onClick={() => handleMobileClick(item.path)} >
                                 <div className={styles.container}>
