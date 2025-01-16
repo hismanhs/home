@@ -5,7 +5,7 @@ import EventLoop from '../Components/EventLoop';
 const CurrentPage = () => {
     const router = useRouter();
     const { id } = router.query; // Access the dynamic parameter
-    const statusClassMap :any = {
+    const statusClassMap : any = {
         EventLoop: <EventLoop />,
         Closure:
             <div style={{ whiteSpace: "pre-wrap" }}>

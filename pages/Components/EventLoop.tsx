@@ -1,10 +1,8 @@
 
 import React from "react";
-import { useRouter } from "next/router";
 import Image from "next/image";
 
 const EventLoop = () => {
-    const router = useRouter();
     return (
         <>
             <Image src="/eventloop.svg" alt="googleIcon" width={700} height={394} />
